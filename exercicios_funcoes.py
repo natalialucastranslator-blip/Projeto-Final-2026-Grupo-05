@@ -39,7 +39,27 @@ def complementar(sequencia):
     return complemento
 # 2) complementar_reversa — esperado: "CGAT"
 # print(complementar_reversa("ATCG"))
+def complementar(sequencia):
+    complemento = ""
 
+    for base in sequencia:
+        if base == "A":
+            complemento += "T"
+        elif base == "T":
+            complemento += "A"
+        elif base == "C":
+            complemento += "G"
+        elif base == "G":
+            complemento += "C"
+
+    return complemento
+
+
+def complementar_reversa(sequencia):
+    return complementar(sequencia)[::-1]
+
+
+print(complementar_reversa("ATCG"))
 
 # 3) transcrever          — esperado: "AUCG"
 # print(transcrever("ATCG"))
