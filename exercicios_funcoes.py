@@ -38,7 +38,6 @@ def complementar(sequencia):
 
     return complemento
 # 2) complementar_reversa — esperado: "CGAT"
-# print(complementar_reversa("ATCG"))
 def complementar(sequencia):
     complemento = ""
 
@@ -54,10 +53,14 @@ def complementar(sequencia):
 
     return complemento
 
-
 def complementar_reversa(sequencia):
-    return complementar(sequencia)[::-1]
+    comp = complementar(sequencia)
+    resultado = ""
 
+    for letra in comp:
+        resultado = letra + resultado
+
+    return resultado
 
 print(complementar_reversa("ATCG"))
 
