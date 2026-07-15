@@ -37,6 +37,8 @@ def complementar(sequencia):
             complemento += "C"
 
     return complemento
+print(complementar("ATCG"))
+
 # 2) complementar_reversa — esperado: "CGAT"
 def complementar(sequencia):
     complemento = ""
