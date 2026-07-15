@@ -22,11 +22,34 @@ from bio.sequencia import (
 
 # 1) complementar        — esperado: "TAGC"
 print(complementar("ATCG"))
+def complementar(sequencia):
+    complemento = ""
 
+    for base in sequencia:
+        if base == "A":
+            complemento += "T"
+        elif base == "T":
+            complemento += "A"
+        elif base == "C":
+            complemento += "G"
+        elif base == "G":
+            complemento += "C"
+
+    return complemento
+print(complementar("ATCG"))
 
 # 2) complementar_reversa — esperado: "CGAT"
 print(complementar_reversa("ATCG"))
+def complementar_reversa(sequencia):
+    comp = complementar(sequencia)
+    resultado = ""
 
+    for letra in comp:
+        resultado = letra + resultado
+
+    return resultado
+
+print(complementar_reversa("ATCG"))
 
 # 3) transcrever          — esperado: "AUCG"
 print(transcrever("ATCG"))
