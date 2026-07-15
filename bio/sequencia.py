@@ -33,12 +33,10 @@ def calcular_percentual(sequencia, bases):
     for base in sequencia:
         if base in bases:
             contador += 1
-     
     return contador / len(sequencia) 
 
     
 def calcular_percentual_gc(sequencia):
-    
     return calcular_percentual(sequencia, ["G", "C"])
 
 
@@ -46,7 +44,6 @@ def contar_bases(sequencia):
     contagem = {"A": 0, "T": 0, "C": 0, "G": 0}
     for base in sequencia:
         contagem[base] += 1
-    
     return contagem
 
 
